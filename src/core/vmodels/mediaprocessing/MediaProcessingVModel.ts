@@ -2,7 +2,7 @@ import { fetchFile, toBlobURL } from "@ffmpeg/util";
 import { AuthVModel } from "../auth/AuthVModel";
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 
-class MediaProcessingVModel extends AuthVModel {
+class MediaProcessingVModel extends AuthVModel implements Transcoder {
 
     private crossOriginIsolationCheckerWorker;
     private ffmpeg = new FFmpeg();

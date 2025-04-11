@@ -13,7 +13,7 @@ function Home() {
   const user: UserAuth = getUser();
   const dispatch = useDispatch();
 
-  const MediaProcess = useMemo(() => new MediaProcessingVModel(), []);
+  const MediaProcess: Transcoder = useMemo(() => new MediaProcessingVModel(), []);
 
   useEffect(() => {
     MediaProcess.checkLogs();
